@@ -1,0 +1,7 @@
+baseURL = "http://matusnovak.com/"
+languageCode = "en-us"
+title = "Matus Novak"
+
+[[deployment.targets]]
+name = "aws"
+URL = "s3://matusnovak.com?region=eu-west-1"

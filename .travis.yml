@@ -1,0 +1,28 @@
+language: python
+python:
+  - "3.7"
+
+branches:
+  only: master
+
+env:
+  global:
+    - AWS_DEFAULT_REGION=eu-west-1
+    - secure: <obfuscated AWS Access Key>
+    - secure:
+
+install:
+  - pip install awscli
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.59.0_Linux-64bit.deb
+  - aws configure set aws_access_key_id $AWS_ACCESS_ID
+  - aws configure set aws_secret_access_key $AWS_SECRET_ID
+  - aws configure set region eu-west-1
+
+script:
+  - hugo
+  - hugo deploy --target=aws
+
+notifications:
+  email:
+    on_failure: always
