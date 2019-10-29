@@ -5,12 +5,6 @@ python:
 branches:
   only: master
 
-env:
-  global:
-    - AWS_DEFAULT_REGION=eu-west-1
-    - secure: <obfuscated AWS Access Key>
-    - secure:
-
 install:
   - pip install awscli
   - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
