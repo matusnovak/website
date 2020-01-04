@@ -56,11 +56,11 @@ disqusShortname = "yourdiscussshortname"
 [[menu.main]]
     name = "Projects"
     weight = 1
-    url  = "/projects/"
+    url  = "/projects/index.html"
 [[menu.main]]
     name = "About"
     weight = 2
-    url = "/about/"
+    url = "/about/index.html"
 
 [[deployment.targets]]
     name = "aws"
