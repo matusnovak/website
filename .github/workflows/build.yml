@@ -12,8 +12,8 @@ jobs:
       - name: Download aws cli
         run: |
           sudo pip install awscli
-          aws configure set aws_access_key_id $AWS_ACCESS_ID
-          aws configure set aws_secret_access_key $AWS_SECRET_ID
+          aws configure set aws_access_key_id "${{ secrets.AWS_ACCESS_ID }}"
+          aws configure set aws_secret_access_key "${{ secrets.AWS_SECRET_ID }}"
           aws configure set region eu-west-1
       - name: Build website
         run: |
