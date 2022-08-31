@@ -20,6 +20,6 @@ dateFormat = "2 January 2006"
   links = [
     { email = "mailto:email@matusnovak.com" },
     { github = "https://github.com/matusnovak/" },
-    { linkedin = "https://www.linkedin.com/in/matus-novak-57153218a/" },
+    { linkedin = "https://www.linkedin.com/in/matus-novak/" },
     { matrix = "https://matrix.to/#/@mnovak:volatilesystem.io" },
   ]
