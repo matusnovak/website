@@ -3,3 +3,9 @@ languageCode: "en-us"
 title: "Matus Novak"
 theme: "config"
 defaultcontentlanguage: "en-US"
+
+deployment:
+  targets:
+    name: "aws"
+    URL: "s3://matusnovak.com?region=eu-west-1"
+    cloudFrontDistributionID: "E1WO2HFAIAXKQ8"

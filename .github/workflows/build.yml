@@ -1,0 +1,23 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and install Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.102.2/hugo_extended_0.102.2_Linux-64bit.tar.gz
+          tar -xvzf hugo_extended_0.102.2_Linux-64bit.tar.gz
+          chmod +x ./hugo
+      - name: Download aws cli
+        run: |
+          sudo pip install awscli
+          aws configure set aws_access_key_id $AWS_ACCESS_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ID
+          aws configure set region eu-west-1
+      - name: Build website
+        run: |
+          ./hugo
+      - name: Deploy website
+        run: |
+          ./hugo deploy --target=aws
