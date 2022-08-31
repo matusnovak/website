@@ -4,6 +4,9 @@ jobs:
   website:
     runs-on: ubuntu-latest
     steps:
+      - name: Submodules
+        run: |
+          git submodule update --init
       - name: Download and install Hugo
         run: |
           wget https://github.com/gohugoio/hugo/releases/download/v0.102.2/hugo_extended_0.102.2_Linux-64bit.tar.gz
