@@ -1,0 +1,5 @@
+baseURL: "https://matusnovak.com/"
+languageCode: "en-us"
+title: "Matus Novak"
+theme: "config"
+defaultcontentlanguage: "en-US"

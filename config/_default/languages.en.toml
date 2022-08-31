@@ -1,0 +1,25 @@
+languageCode = "en-au"
+languageName = "English (Australia)"
+displayName = ":flag-au:"
+isoCode = "en-AU"
+weight = 1
+rtl = false
+
+title = "Matus Novak"
+# logo = "img/logo.jpg"
+description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+copyright = "&copy; 2022 Congo contributors"
+
+dateFormat = "2 January 2006"
+
+[author]
+  name = "Matus Novak"
+  image = "images/avatar.jpg"
+  headline = "Software developer"
+  bio = "A C++ software developer with passion for low level systems, Kubernetes, and graphics programming."
+  links = [
+    { email = "mailto:email@matusnovak.com" },
+    { github = "https://github.com/matusnovak/" },
+    { linkedin = "https://www.linkedin.com/in/matus-novak-57153218a/" },
+    { matrix = "https://matrix.to/#/@mnovak:volatilesystem.io" },
+  ]
