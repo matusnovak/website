@@ -246,3 +246,17 @@ The STLINK-V3 Minie provides UART RX/TX pins on the bottom side of the connector
 
 ![putty_output.png](putty_output.png)
 
+## Debugging
+
+The debugging should work right out of the box, if you have correctly connected your STLINK to the microcontroller. There is one annoying thing. When you start debugging, it is very likely that your program will fail at `SystemClock_Config();` function.
+
+However, there is a simple solution to that from [here](https://sysprogs.com/w/forums/topic/clock-from-cubemx-not-applied-in-visualgdb-on-stm32f446/#post-30948) in which the author recommends adding the following piece of code before the `SystemClock_Config();` function is called.
+
+```cpp
+#ifdef DEBUG
+    if (__HAL_RCC_GET_SYSCLK_SOURCE() == RCC_CFGR_SWS_PLL) {
+        HAL_RCC_DeInit();
+    }
+#endif
+```
+
